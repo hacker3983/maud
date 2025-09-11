@@ -3,6 +3,8 @@
 <head>
 	<title>Maud (Music Audio Player)</title>
 	<link rel="icon" type="image/x-icon" href="favicon/maud.png">
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
 	<meta name="description" content="Maud is a modern, cross-platform music audio player written in C. Lightweight, fast, and open-source.">
 	<meta property="og:title" content="Maud - Cross Platform Music Audio Player">
 	<meta property="og:description" content="A lightweight, cross-platform music audio player built in C. Free, open-source, and modern.">
@@ -10,30 +12,32 @@
 	<meta property="og:image:type" content="image/png">
 	<meta property="og:url" content="https://hacker3983.github.io/maud">
 	<meta property="og:type" content="website">
-	<style>
-		body {
-			background-color: #121212;
-			color: dodgerblue;
-			text-align: center;
-		}
-
-		img {
-			width: 500px;
-			height: 300px;
-		}
-	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+	<a href="" id="logo">
+		<img src="favicon/maud.png" alt="Maud logo">
+	</a>
+	<ul id="navbar">
+		<li class="navelement">
+			<a href="">Home</a>
+		</li>
+		<li class="navelement">
+			<a href="download">Download</a>
+		</li>
+		<li class="navelement">
+			<a href="about">About</a>
+		</li>
+	</ul>
+	<br><br><br><br>
 	<h1>Maud is a Cross Platform Music Audio Player Application Written in C.</h1>
 	<h2>Screenshots:</h2>
-	<img src="Screenshots/Playing Music.png"><br><br>
-	<img src="Screenshots/Play Queue.png"><br><br>
-	<img src="Screenshots/Playlist grid view.png"><br><br>
-	<img src="Screenshots/playlist list view.png"><br><br>
-	<img src="Screenshots/Playlist Open.png"><br><br>
-	<img src="Screenshots/Customize Settings.png"><br><br>
-	<img src="Screenshots/Music Library Settings.png"><br><br>
-	<img src="Screenshots/About Settings.png"><br><br>
-	<a href="https://github.com/hacker3983/maud-player">Source Code</a>
+	<div id="screenshot-container">
+		<button onclick="previous()" id="backbtn"><img src="images/back.png"></button>
+		<img id="screenshot" src="Screenshots/Playing Music.png">
+		<button onclick="next()" id="nextbtn"><img src="images/next.png"></button>
+	</div>
+	<br><br><br><br><br>
+	<a class="source-code" href="https://github.com/hacker3983/maud-player">Source Code</a>
 </body>
 </html>
